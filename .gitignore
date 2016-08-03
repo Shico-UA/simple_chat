@@ -1,0 +1,9 @@
+*.pyc
+*.pyo
+*.sublime-project
+*.sublime-workspace
+*.json
+bin/
+include/
+lib/
+local/

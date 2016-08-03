@@ -1,0 +1,44 @@
+Plik csocket.py zawiera prostego klienta TCP/IP,
+który łączy się na podany adres.
+Dane przesłane na standardowe wejście, wysyłane są poprzez połączenie.
+Dane nadchodzące z połączenia, wyświetlane są na standardowym wyjściu.
+
+Plik ssocket.py zawiera prosty serwer TCP/IP.
+Serwer oczekuje na podłączenie jednego klienta, po czym
+przestaje akceptować nowe połączenia.
+Dane przesłane na standardowe wejście, wysyłane są poprzez połączenie.
+Dane nadchodzące z połączenia, wyświetlane są na standardowym wyjściu.
+
+Zadanie 1)
+Przerobić ssocket.py tak, aby działał jako serwer echo.
+Czyli odsyłał klientowi tylko to, co sam przysłał.
+
+Zadanie 2)
+Przerobic ssocket.py tak, by oczekiwał na połączenia
+od dwóch klientów.
+Następnie by dane nadchodzące od jednego klienta wysyłał do drugiego klienta.
+I wzajemnie.
+
+Bonus: obsłużyć błędy
+
+
+--------------------------------------------
+
+csocket.py is a simple tcp/ip client.
+Data sent to its stdin it sent out thru the tcp connection.
+Data received from the tcp connection is sent to stdout.
+
+ssocket.py is a simple tcp/ip server.
+The server awaits for a single client and stops listening afterwards.
+Data sent to its stdin it sent out thru the accepted tcp connection.
+Data received from the tcp connection is sent to stdout.
+
+Task 1)
+Modify ssocket.py to work as an echo server.
+
+Task 2)
+Modify ssocket.py to accept two tcp connections and work as a chat
+server, sending data received from connection1 to connection2 and
+the other way round.
+
+Bonus: Handle all errors.
