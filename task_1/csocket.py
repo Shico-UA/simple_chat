@@ -1,8 +1,9 @@
 import socket
-import _thread
-thread = _thread
 import sys
 import time
+import _thread
+thread = _thread
+
 
 def operate(main_port, main_ip):
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -10,12 +11,14 @@ def operate(main_port, main_ip):
     thread.start_new_thread(reader, (s,))
     writer(s)
 
+
 def reader(s):
     ch = s.recv(1)
     while ch:
         sys.stdout.buffer.write(ch)
         sys.stdout.flush()
         ch = s.recv(1)
+
 
 def writer(s):
     ch = sys.stdin.buffer.read(1)
